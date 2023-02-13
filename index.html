@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap" rel="stylesheet">
+  <title>Bora codar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+
+
+    <div class="calculator">
+
+      <header>
+        <input disabled id="countOperation" type="text" />
+        <p id="result" type="text"></p>
+
+        <ion-icon class="copy" name="copy-outline"></ion-icon>
+        <p class="tooltip">Copiado!</p>
+
+      </header>
+
+
+
+
+      <div class="buttons">
+        <button id="back" class="color">CE</button>
+        <button id="clear">C</button>
+
+        <button class="charKey" data-value='%'>%</button>
+        <button class="charKey operation" data-value='/'>
+          <i><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M3.5 14C3.5 13.5168 3.89175 13.125 4.375 13.125H23.625C24.1082 13.125 24.5 13.5168 24.5 14C24.5 14.4832 24.1082 14.875 23.625 14.875H4.375C3.89175 14.875 3.5 14.4832 3.5 14Z"
+                fill="#EBEBEB" />
+              <path
+                d="M14 8.75C14.9665 8.75 15.75 7.9665 15.75 7C15.75 6.0335 14.9665 5.25 14 5.25C13.0335 5.25 12.25 6.0335 12.25 7C12.25 7.9665 13.0335 8.75 14 8.75Z"
+                fill="#EBEBEB" />
+              <path
+                d="M14 22.75C14.9665 22.75 15.75 21.9665 15.75 21C15.75 20.0335 14.9665 19.25 14 19.25C13.0335 19.25 12.25 20.0335 12.25 21C12.25 21.9665 13.0335 22.75 14 22.75Z"
+                fill="#EBEBEB" />
+            </svg>
+          </i>
+        </button>
+        <button class="charKey" data-value='7'>7</button>
+        <button class="charKey" data-value='8'>8</button>
+        <button class="charKey" data-value='9'>9</button>
+        <button class="charKey operation" data-value=' * '>
+          <i><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M22.4937 5.50628C22.8354 5.84799 22.8354 6.40201 22.4937 6.74372L6.74372 22.4937C6.40201 22.8354 5.84799 22.8354 5.50628 22.4937C5.16457 22.152 5.16457 21.598 5.50628 21.2563L21.2563 5.50628C21.598 5.16457 22.152 5.16457 22.4937 5.50628Z"
+                fill="#EBEBEB" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5.50628 5.50628C5.84799 5.16457 6.40201 5.16457 6.74372 5.50628L22.4937 21.2563C22.8354 21.598 22.8354 22.152 22.4937 22.4937C22.152 22.8354 21.598 22.8354 21.2563 22.4937L5.50628 6.74372C5.16457 6.40201 5.16457 5.84799 5.50628 5.50628Z"
+                fill="#EBEBEB" />
+            </svg>
+          </i>
+        </button>
+        <button class="charKey" data-value='4'>4</button>
+        <button class="charKey" data-value='5'>5</button>
+        <button class="charKey" data-value='6'>6</button>
+        <button class="charKey operation" data-value=' - '>
+          <i>
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M3.5 14C3.5 13.5168 3.89175 13.125 4.375 13.125H23.625C24.1082 13.125 24.5 13.5168 24.5 14C24.5 14.4832 24.1082 14.875 23.625 14.875H4.375C3.89175 14.875 3.5 14.4832 3.5 14Z"
+                fill="#EBEBEB" /></i>
+          </svg>
+        </button>
+        <button class="charKey" data-value='1'>1</button>
+        <button class="charKey" data-value='2'>2</button>
+        <button class="charKey" data-value='3'>3</button>
+        <button class="charKey operation" data-value=' + '>
+          <i>
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M3.5 14C3.5 13.5168 3.89175 13.125 4.375 13.125H23.625C24.1082 13.125 24.5 13.5168 24.5 14C24.5 14.4832 24.1082 14.875 23.625 14.875H4.375C3.89175 14.875 3.5 14.4832 3.5 14Z"
+                fill="#EBEBEB" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M14 3.5C14.4832 3.5 14.875 3.89175 14.875 4.375V23.625C14.875 24.1082 14.4832 24.5 14 24.5C13.5168 24.5 13.125 24.1082 13.125 23.625V4.375C13.125 3.89175 13.5168 3.5 14 3.5Z"
+                fill="#EBEBEB" />
+            </svg>
+          </i>
+        </button>
+        <button class=" charKey" data-value='0'> 0</button>
+        <button class=" charKey" data-value='00'>00</button>
+        <button class="charKey" data-value='.'>,</button>
+        <button id="equal" data-value=' = ' class=" operation">
+          <i>
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M3.5 17.5C3.5 17.0168 3.89175 16.625 4.375 16.625H23.625C24.1082 16.625 24.5 17.0168 24.5 17.5C24.5 17.9832 24.1082 18.375 23.625 18.375H4.375C3.89175 18.375 3.5 17.9832 3.5 17.5Z"
+                fill="#EBEBEB" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M3.5 10.5C3.5 10.0168 3.89175 9.625 4.375 9.625H23.625C24.1082 9.625 24.5 10.0168 24.5 10.5C24.5 10.9832 24.1082 11.375 23.625 11.375H4.375C3.89175 11.375 3.5 10.9832 3.5 10.5Z"
+                fill="#EBEBEB" />
+            </svg>
+          </i>
+
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="main.js"></script>
+</body>
+
+
+</html>
